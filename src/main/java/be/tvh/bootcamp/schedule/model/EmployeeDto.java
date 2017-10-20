@@ -11,17 +11,18 @@ import java.time.LocalDate;
 @Builder
 public class EmployeeDto {
 
-	@JsonView(EmployeeView.class)
+	@JsonView(EmployeeView.Short.class)
 	private Long id;
 
-	@JsonView(EmployeeView.class)
+	@JsonView(EmployeeView.Short.class)
 	private String name;
 
-	@JsonView(EmployeeView.class)
+	@JsonView(EmployeeView.Short.class)
 	private LocalDate startDate;
 
-	@JsonView(EmployeeView.class)
+	@JsonView(EmployeeView.Short.class)
 	private String department;
 
+	@JsonView(EmployeeView.Detail.class)
 	private EmployeeDto boss;
 }
